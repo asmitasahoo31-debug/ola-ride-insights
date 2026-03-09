@@ -1,18 +1,10 @@
 import streamlit as st
 import pandas as pd
-import mysql.connector
 import plotly.express as px
 
 # Page settings
 st.set_page_config(page_title="OLA Ride Insights", layout="wide")
 
-# Connect to MySQL
-conn = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="root123",
-    database="ola_project"
-)
 
 # Load data
 query = "SELECT * FROM rides"
